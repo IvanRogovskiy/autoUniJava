@@ -2,10 +2,17 @@ import java.util.Date;
 
 public abstract class BasicEntry {
 
-    private String author;
-    private Date date;
-    private String message;
-    private String messageType;
+    final String author;
+    final Date date;
+    final String message;
+    final MessageType messageType;
+
+    public BasicEntry(String author, Date date, String message, MessageType messageType) {
+        this.author = author;
+        this.date = date;
+        this.message = message;
+        this.messageType = messageType;
+    }
 
     public abstract void showEntrySize();
 

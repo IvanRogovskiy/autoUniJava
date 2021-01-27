@@ -1,9 +1,13 @@
-public class Video extends MediaEntry {
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
-    private String resolution;
+public class Video extends MediaEntry implements Playable {
 
-    public Video(int size, String resolution) {
-        super(size);
+    private final String resolution;
+
+    public Video(String author, Date date, String message, MessageType messageType, int size, String resolution) {
+        super(author, date, message, messageType, size);
         this.resolution = resolution;
     }
 
@@ -11,8 +15,9 @@ public class Video extends MediaEntry {
         return resolution;
     }
 
-    public void setResolution(String resolution) {
-        this.resolution = resolution;
+    public void play() {
+        final DateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+        System.out.println("I play video added by " + author + ", recorded: " + sdf.format(this.date) );
     }
 
 }

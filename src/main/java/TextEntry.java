@@ -1,8 +1,11 @@
+import java.util.Date;
+
 public class TextEntry extends BasicEntry {
 
-    private int numberOfSymbols;
+    private final int numberOfSymbols;
 
-    public TextEntry(int numberOfSymbols) {
+    public TextEntry(int numberOfSymbols, String author, Date date, String message, MessageType messageType) {
+        super(author, date, message, messageType);
         this.numberOfSymbols = numberOfSymbols;
     }
 
@@ -11,10 +14,6 @@ public class TextEntry extends BasicEntry {
 
     public int getNumberOfSymbols() {
         return numberOfSymbols;
-    }
-
-    public void setNumberOfSymbols(int numberOfSymbols) {
-        this.numberOfSymbols = numberOfSymbols;
     }
 
 }

@@ -1,17 +1,16 @@
+import java.util.Date;
+
 public class MediaEntry extends BasicEntry {
 
-    private int size;
+    private final int size;
 
-    public MediaEntry(int size) {
+    public MediaEntry(String author, Date date, String message, MessageType messageType, int size) {
+        super(author, date, message, messageType);
         this.size = size;
     }
 
     public void showEntrySize() {
         System.out.println("Entry size = " + size);
-    }
-
-    public void setSize(int size) {
-        this.size = size;
     }
 
     public int getSize() {
