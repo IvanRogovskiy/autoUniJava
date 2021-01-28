@@ -1,6 +1,6 @@
 import java.util.Date;
 
-public class TextEntry extends BasicEntry {
+public class TextEntry extends BasicEntry implements Printable {
 
     private final int numberOfSymbols;
 
@@ -16,4 +16,8 @@ public class TextEntry extends BasicEntry {
         return numberOfSymbols;
     }
 
+    @Override
+    public void print() {
+        System.out.println("Printing the message: " + getMessage());
+    }
 }

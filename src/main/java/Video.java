@@ -17,7 +17,7 @@ public class Video extends MediaEntry implements Playable {
 
     public void play() {
         final DateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-        System.out.println("I play video added by " + author + ", recorded: " + sdf.format(this.date) );
+        System.out.println("I play video added by " + getAuthor() + ", recorded: " + sdf.format(getDate()) );
     }
 
 }

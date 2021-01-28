@@ -1,8 +1,6 @@
 public enum MessageType {
 
-    TEXT,
-    AUDIO,
-    IMAGE,
-    VIDEO
-
+    POST,
+    REPOST,
+    COMMENT,
 }

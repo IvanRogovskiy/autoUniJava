@@ -9,7 +9,7 @@ public class TestClass {
 
         Date date = new Date();
 
-        Playable video = new Video("irogovsk",date, "its my new video", MessageType.VIDEO,120,"1280x1800");
+        Playable video = new Video("irogovsk",date, "its my new video", MessageType.POST,120,"1280x1800");
         video.play();
     }
 
