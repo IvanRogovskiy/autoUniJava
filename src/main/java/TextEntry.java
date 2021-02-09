@@ -1,8 +1,11 @@
-public class TextEntry extends BasicEntry {
+import java.util.Date;
 
-    private int numberOfSymbols;
+public class TextEntry extends BasicEntry implements Printable {
 
-    public TextEntry(int numberOfSymbols) {
+    private final int numberOfSymbols;
+
+    public TextEntry(int numberOfSymbols, String author, Date date, String message, MessageType messageType) {
+        super(author, date, message, messageType);
         this.numberOfSymbols = numberOfSymbols;
     }
 
@@ -13,8 +16,8 @@ public class TextEntry extends BasicEntry {
         return numberOfSymbols;
     }
 
-    public void setNumberOfSymbols(int numberOfSymbols) {
-        this.numberOfSymbols = numberOfSymbols;
+    @Override
+    public void print() {
+        System.out.println("Printing the message: " + getMessage());
     }
-
 }

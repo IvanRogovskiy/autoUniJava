@@ -1,10 +1,12 @@
-public class Audio extends MediaEntry {
+import java.util.Date;
 
-    private String singer;
-    private String title;
+public class Audio extends MediaEntry implements Playable {
 
-    public Audio(int size, String singer, String title) {
-        super(size);
+    private final String singer;
+    private final String title;
+
+    public Audio(int size, String singer, String title, String author, Date date, String message, MessageType messageType) {
+        super(author, date, message, messageType, size);
         this.singer = singer;
         this.title = title;
     }
@@ -13,16 +15,12 @@ public class Audio extends MediaEntry {
         return singer;
     }
 
-    public void setSinger(String singer) {
-        this.singer = singer;
-    }
-
     public String getTitle() {
         return title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void play() {
+        System.out.println("I am playing song: " + title + "-" + singer);
     }
 
 }
