@@ -1,3 +1,8 @@
+package autouni.classes;
+
+import autouni.data.MessageType;
+import autouni.interfaces.Playable;
+
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;

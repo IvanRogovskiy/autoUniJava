@@ -1,3 +1,7 @@
+package autouni.classes;
+
+import autouni.data.MessageType;
+
 import java.util.Date;
 
 public class Image extends MediaEntry {

@@ -1,3 +1,5 @@
+import autouni.classes.Dishwasher;
+
 public class DishwasherTest {
 
     public static void main(String[] args) {

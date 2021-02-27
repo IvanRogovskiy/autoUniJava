@@ -1,3 +1,5 @@
+package autouni.data;
+
 public enum MessageType {
 
     POST,
