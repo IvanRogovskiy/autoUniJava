@@ -13,10 +13,10 @@ public class DishwasherTest {
 //        dishwasher.runTheMachine();
 //        dishwasher.loadPlate();
 
-        dishwasher.loadPlate();
-        dishwasher.runTheMachine();
-        dishwasher.stopMachine();
-        dishwasher.loadPlate();
+//        dishwasher.loadPlate();
+//        dishwasher.runTheMachine();
+//        dishwasher.stopMachine();
+//        dishwasher.loadPlate();
 
     }
 }
