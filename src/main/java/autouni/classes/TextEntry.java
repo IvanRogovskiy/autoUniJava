@@ -1,3 +1,8 @@
+package autouni.classes;
+
+import autouni.data.MessageType;
+import autouni.interfaces.Printable;
+
 import java.util.Date;
 
 public class TextEntry extends BasicEntry implements Printable {

@@ -1,3 +1,5 @@
+package autouni.exceptions;
+
 public class MachineIsOverLoadedException extends RuntimeException
 
 {

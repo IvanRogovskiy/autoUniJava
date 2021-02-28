@@ -1,3 +1,9 @@
+package autouni.classes;
+
+import autouni.exceptions.CleanPlatesArentExtractedException;
+import autouni.exceptions.MachineIsEmptyException;
+import autouni.exceptions.MachineIsOverLoadedException;
+import autouni.exceptions.MachineIsWorkingException;
 
 public class Dishwasher {
 
@@ -44,24 +50,24 @@ public class Dishwasher {
      * @throws CleanPlatesArentExtractedException if machine has completed cleaning
      */
     void loadPlate() {
-        if (isWorking()) {
+        if (isWorking) {
             throw new MachineIsWorkingException("Please stop the machine before loading the plates");
         }
-        if (getCurrentLoad() == getMaxLoad() || getCurrentLoad() > getMaxLoad()) {
+        if (currentLoad >= maxLoad) {
             throw new MachineIsOverLoadedException("Machine is overloaded.");
         }
-        if (getCurrentLoad() != 0 && isWashingCompleted()) {
+        if (currentLoad != 0 && isWashingCompleted) {
             throw new CleanPlatesArentExtractedException("Please extract all clean plates before loading dirty");
         }
-        setCurrentLoad(getCurrentLoad() + 1);
+        setCurrentLoad(currentLoad + 1);
         System.out.println("All plates have been loaded");
     }
 
     void extractAllPlates() {
-        if (getCurrentLoad() == 0) {
+        if (currentLoad == 0) {
             throw new MachineIsEmptyException("Machine is empty");
         }
-        if (isWorking()) {
+        if (isWorking) {
             throw new MachineIsWorkingException("Please stop the machine before extracting the plates");
         }
         setCurrentLoad(0);
